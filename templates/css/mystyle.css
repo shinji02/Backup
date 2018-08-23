@@ -1,0 +1,35 @@
+.back_cus {
+  background: #3A5FCD;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+.intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+hr.style-three {
+height: 30px;
+width: 50%;
+border-style: solid;
+border-color: white;
+border-width: 1px 0 0 0;
+border-radius: 20px;
+}
+hr.style-three:before {
+display: block;
+content: "";
+height: 30px;
+margin-top: -31px;
+border-style: solid;
+border-color: white;
+border-width: 0 0 1px 0;
+border-radius: 20px;
+}

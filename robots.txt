@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /conf/
+Disallow: /gestion/
+Disallow: /libs/
+Disallow: /phpAbstractClass/
+Disallow: /phpClass/
+Disallow: /phpInterface/
+Disallow: /save/
+Disallow: /tempUploads/
