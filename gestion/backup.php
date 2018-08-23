@@ -83,7 +83,6 @@ if($myBackup)
 					if($rt)
 					{
 						echo 'swal("Notification!", "Backup du site: '.$site[0]['name'].' effectuer!", "success");';
-						$MyEmail->send_email_sucess($myFtp->generatePDF());
 						unlink($dirUplods.$entry);
 					}
 					else
