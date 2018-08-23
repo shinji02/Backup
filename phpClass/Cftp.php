@@ -3,16 +3,20 @@ namespace ftp;
 
 require_once dirname(__FILE__).'/../phpClass/Cfactory.php';
 require_once dirname(__FILE__).'/../conf/backup.php';
+require_once dirname(__FILE__).'/../phpClass/CPdf.php';
 use factory\factory;
 use PDO;
 use conf\backup;
+use pdf\CPdf;
+
 set_time_limit(630);
 class Cftp {
 	private $ftpId = null;
 	private $ftpConnect = null;
 	
+	private $rep = null;
 	public function __construct() {
-		
+		$this->rep = array();                   
 	}
 	
 	public function count_array($array) :int
@@ -160,9 +164,8 @@ class Cftp {
 					echo "<br>";
 					if($dateTFile<$dateToday)
 					{
-						echo "delete : ".$entry;
 						$this->deleteBDD($entry);
-						//unlink(backup::BACKUPURL.$siteName.'/'.$entry);
+						unlink(backup::BACKUPURL.$siteName.'/'.$entry);
 					}
 				}
 			}
@@ -174,14 +177,22 @@ class Cftp {
 	{
 		if(ssh2_scp_send($this->ftpId, $localFile, $backupFile))
 		{		
+			$this->rep[] = ['name' => $siteName, 'statut' => "Ok"];
 			$this->insertBdd($siteName, $backupToday, "ok",$linkBackup);
 			return true;
 		}
 		else
 		{
+			$this->rep[] = ['name' => $siteName, 'statut' => "Echec"];
 			return false;
 		}
 
+	}
+	public function generatePDF()
+	{
+		$Mypdf = new CPdf();	
+		$doc = $Mypdf->genereatePDF($this->rep);
+		return $doc;
 	}
 
 	public function logoutFTP()

@@ -20,7 +20,7 @@ class CMail {
 		$this->configBackup = new backup();
 	}
 	
-	public function send_email_sucess($siteName)
+	public function send_email_sucess($doc)
 	{
 		$mail = new PHPMailer;                              // Passing `true` enables exceptions
 		$mail->isSMTP();
@@ -34,10 +34,10 @@ class CMail {
 		{
 			$mail->addAddress($msg);
 		}
-		$mail->Subject = 'Backup du site: '.$siteName;
-		$mail->msgHTML(file_get_contents( __DIR__.'/content.html'));
+		$mail->Subject = 'Rapport des backup';
+		$mail->msgHTML("<html>Backup des site effectuer</html>");
 		$mail->AltBody = 'This is a plain-text message body';
-		
+		$mail->addStringAttachment($doc, "rapport.pdf","base64","application/pdf");
 		if (!$mail->send()) {
 		} else {
 		}

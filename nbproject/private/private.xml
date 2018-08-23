@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file://192.168.0.207/public/BackupManagement/phpClass/CPdf.php</file>
+            <file>file://192.168.0.207/public/BackupManagement/phpClass/CMail.php</file>
+            <file>file://192.168.0.207/public/BackupManagement/phpClass/Cftp.php</file>
+            <file>file://192.168.0.207/public/BackupManagement/libs/fpdf/fpdf.php</file>
+            <file>file://192.168.0.207/public/BackupManagement/backup.php</file>
+            <file>file://192.168.0.207/public/BackupManagement/gestion/backup.php</file>
+        </group>
     </open-files>
 </project-private>

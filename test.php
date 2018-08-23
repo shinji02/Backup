@@ -23,4 +23,5 @@
 	$Mypdf = new CPdf();
 	echo "Test du suppresion";
 	
-	$Mypdf->genereatePDF("a");
+	$doc = $myFtp->generatePDF();
+	$MyEmail->send_email_sucess($doc);

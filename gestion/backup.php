@@ -18,7 +18,6 @@ $myFtp = new Cftp();
 $myKey = new CKey();
 $keySecurity = $myKey->getKey();
 $MyEmail = new CMail();
-
 ///////////////////////////////////Récupération des information du site et du serveur de sauvergarde associées///////////////////////////
 $hooks = array(
 	array($_POST['id'], PDO::PARAM_INT),
@@ -84,6 +83,7 @@ if($myBackup)
 					if($rt)
 					{
 						echo 'swal("Notification!", "Backup du site: '.$site[0]['name'].' effectuer!", "success");';
+						$MyEmail->send_email_sucess($myFtp->generatePDF());
 						unlink($dirUplods.$entry);
 					}
 					else
