@@ -11,9 +11,9 @@ use MySmarty\MySmarty;
 use conf\security;
 
 
+session_start();
 if(isset($_GET['connect']) && ($_GET['connect'] != null))
 {
-	session_start();
 	if(isset($_POST['passwordConnect']) && ($_POST['passwordConnect'] != null))
 	{
 		if($_POST['passwordConnect'] == security::PASSWORD)
@@ -39,6 +39,10 @@ else if(isset ($_GET['deconnect']) && ($_GET['deconnect'] != null))
 }
 else
 {
+	if(isset($_SESSION['connect']) && $_SESSION['connect'] === 1)
+	{
+		header("Location:gestion/");
+	}
 	$bd = new factory(dataBase::DSN, dataBase::DBNAME, dataBase::USER, dataBase::PASS, dataBase::TYPE);
 	$smarty = new MySmarty();
 	$smarty->display("login.tpl");

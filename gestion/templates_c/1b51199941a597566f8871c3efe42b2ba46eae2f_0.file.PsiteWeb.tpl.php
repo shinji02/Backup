@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-22 15:57:27
+/* Smarty version 3.1.32, created on 2018-08-24 09:38:04
   from '/var/www/BackupManagement/templates/admin/PsiteWeb.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7d6bc780aab1_67857691',
+  'unifunc' => 'content_5b7fb5dca5bf14_80772107',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b51199941a597566f8871c3efe42b2ba46eae2f' => 
     array (
       0 => '/var/www/BackupManagement/templates/admin/PsiteWeb.tpl',
-      1 => 1534256995,
+      1 => 1535093393,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7d6bc780aab1_67857691 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b7fb5dca5bf14_80772107 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html lang="en">
   <head>
@@ -85,10 +85,15 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 					  </a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link text-white" href="index.php?page=Pgestion">
-						  <i class="far fa-history"></i> Gestion des sauvegardes
-					  </a>
-					</li>			  
+						<a class="nav-link text-white" href="index.php?page=Pgestion">
+							<i class="far fa-history"></i> Gestion des sauvegardes
+						 </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="index.php?page=Pcontrol">
+							<i class="fas fa-cog"></i> Controle Avancée
+						</a>
+					</li>					
 				</ul>        
 			</div>
         </nav>

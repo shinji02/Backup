@@ -26,3 +26,17 @@ $("#date").change(function(event){
 		window.location.href ="index.php?page=Pgestion";
 	}
 });
+
+$("#emailSucess").change(function (event){
+	if ($("#emailSucess").val()  == 1)
+		$("#emailSucess").val("0");
+	else
+		$("#emailSucess").val("1");
+});
+
+$("#emailError").change(function (event){
+	if ($("#emailError").val()  == 1)
+		$("#emailError").val("0");
+	else
+		$("#emailError").val("1");
+});

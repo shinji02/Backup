@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-22 16:56:47
+/* Smarty version 3.1.32, created on 2018-08-24 08:50:02
   from '/var/www/BackupManagement/templates/admin/Pgestion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7d79af124bf7_84273812',
+  'unifunc' => 'content_5b7faa9a61d253_14511378',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4e3cb6e215d05610ae1062b0da6084d179c4461d' => 
     array (
       0 => '/var/www/BackupManagement/templates/admin/Pgestion.tpl',
-      1 => 1534949806,
+      1 => 1535093385,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7d79af124bf7_84273812 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b7faa9a61d253_14511378 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/BackupManagement/libs/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <html lang="en">
@@ -82,10 +82,15 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 					  </a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link text-white blueac" href="index.php?page=Pgestion">
-						  <i class="far fa-history"></i> Gestion des sauvegardes
-					  </a>
-					</li>			  
+						<a class="nav-link text-white blueac" href="index.php?page=Pgestion">
+							<i class="far fa-history"></i> Gestion des sauvegardes
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="index.php?page=Pcontrol">
+							<i class="fas fa-cog"></i> Controle Avancée
+						</a>
+					</li>					
 				</ul>        
 			</div>
         </nav>

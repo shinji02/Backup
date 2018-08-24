@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-24 14:43:17
-  from '/var/www/BackupManagement/templates/admin/Pdashborad.tpl' */
+/* Smarty version 3.1.32, created on 2018-08-24 16:14:25
+  from '/var/www/BackupManagement/templates/admin/Pcontrol.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7ffd65a2a5b1_63795518',
+  'unifunc' => 'content_5b8012c12d4e92_65531651',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '348d62588ee3f71883fa0f8ad7d0fd4853eec0bf' => 
+    '273fc76249dffdb8575484645444c8b34582c1d2' => 
     array (
-      0 => '/var/www/BackupManagement/templates/admin/Pdashborad.tpl',
-      1 => 1535114594,
+      0 => '/var/www/BackupManagement/templates/admin/Pcontrol.tpl',
+      1 => 1535120057,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7ffd65a2a5b1_63795518 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8012c12d4e92_65531651 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -35,14 +35,11 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 } else { ?>Sans titre<?php }?></title>
 
     <!-- Bootstrap core CSS -->
+	
     <link href="../templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="../templates/css/fontawesomepro/css/all.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
-	<link href="../templates/admin/css/circle.css" rel="stylesheet">
-	<?php echo '<script'; ?>
- src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
->
   </head>
 
   <body>
@@ -67,7 +64,7 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white blueac" href="index.php">
+						<a class="nav-link text-white" href="index.php">
 						<i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
 						</a>
 					</li>
@@ -87,7 +84,7 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 					  </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white" href="index.php?page=Pcontrol">
+						<a class="nav-link text-white blueac" href="index.php?page=Pcontrol">
 							<i class="fas fa-cog"></i> Controle Avancée
 						</a>
 					</li>					
@@ -96,64 +93,50 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Panel administration</h1>
-          </div>
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+				<h1 class="h2">Controle Avancée</h1>
+			 </div>
 			<div class="row">
-				<div class="col-md-4">
-					<div class="card p-4">
-						<div class="card-body d-flex justify-content-between align-items-center">
-							<div>
-								<span class="h4 d-block font-weight-normal mb-2"><?php echo $_smarty_tpl->tpl_vars['vars']->value['numberSie'];?>
- - site enregistrer</span>
-							</div>
-							<div class="h2 text-muted">
-								<i class="far fa-browser"></i>
-							</div>
-						</div>
+				<div class="swatches-col" style="width: 100%">
+					<div class="pallete-item" style="width:22%">
+						<dl class="palette palette-wet-asphalt">
+							<dt>Paramétre du site</dt>
+						</dl>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card p-4">
-						<div class="card-body d-flex justify-content-between align-items-center">
-							<div>
-								<span class="h4 d-block font-weight-normal mb-2"><?php echo $_smarty_tpl->tpl_vars['vars']->value['numberSrvSite'];?>
- - Serveur de sauvegarde enregistrer</span>
-							</div>
-
-							<div class="h2 text-muted">
-								<i class="fal fa-server"></i>
-							</div>
-						</div>
+					<div class="pallete-item" style="width: 22%">
+						<dl class="palette palette-wet-asphalt">
+							<dt>Paraméter des backup</dt>
+						</dl>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="card p-4">
-						<div class="card-body">
-							<h3 class="text-center">Espace de stockage</h3>
-							<div class="c100 <?php if ($_smarty_tpl->tpl_vars['vars']->value['percentage'] <= 50) {?>green<?php } elseif ($_smarty_tpl->tpl_vars['vars']->value['percentage'] >= 51 && $_smarty_tpl->tpl_vars['vars']->value['percentage'] <= 90) {?>orange<?php } elseif ($_smarty_tpl->tpl_vars['vars']->value['percentage'] >= 91) {?>red<?php }?> p<?php echo $_smarty_tpl->tpl_vars['vars']->value['percentage'];?>
-" style="left: 35%">
-								<span><?php echo $_smarty_tpl->tpl_vars['vars']->value['percentage'];?>
-%</span>
-									<div class="slice">
-									<div class="bar"></div>
-									<div class="fill"></div>
+					<div class="pallete-item" style="width: 22%">
+						<dl class="palette palette-wet-asphalt">
+							<dt>Paramétre des email</dt>
+							<div class="row">
+								<div class="col-8">
+									<h6>Email de réussite du backup</h6>
+								</div>
+								<div class="col-4 text-center">
+									<label class="label-switch switch-success">																
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailSucess" id="emailSucess" value="1" checked="checked">
+									<span class="lable"></span></label>
 								</div>
 							</div>
-						</div>
-						Utiliser :  <?php echo $_smarty_tpl->tpl_vars['vars']->value['diskusage'];?>
-<br>
-						Libre	 :	<?php echo $_smarty_tpl->tpl_vars['vars']->value['diskFree'];?>
-<br>
-						Total	 :  <?php echo $_smarty_tpl->tpl_vars['vars']->value['diskTotal'];?>
-<br>
-						<?php if ($_smarty_tpl->tpl_vars['vars']->value['percentage'] >= 91) {?>
-							<?php echo '<script'; ?>
->swal("Attention!", "Il ne reste plus beaucoup d'espace!", "error");<?php echo '</script'; ?>
->
-						<?php }?>
+							<div class="row">
+								<div class="col-8">
+									<h6>Email d'echec du backup</h6>
+								</div>
+								<div class="col-4 text-center">
+									<label class="label-switch switch-success">																
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailError" id="emailError" value="1" checked="checked">
+									<span class="lable"></span></label>
+								</div>
+							</div>
+						</dl>
+					</div>
+					<div class="pallete-item" style="width:  22%">
+						<dl class="palette palette-wet-asphalt">
+							<dt>Base de donnée</dt>
+						</dl>
 					</div>
 				</div>
 			</div>
@@ -172,8 +155,10 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 >
     <?php echo '<script'; ?>
  src="../templates/admin/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-
+>	
+	<?php echo '<script'; ?>
+ src="../templates/admin/js/gestion.js"><?php echo '</script'; ?>
+>	
   </body>
 </html>
 </html>

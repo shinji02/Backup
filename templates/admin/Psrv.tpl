@@ -57,7 +57,12 @@
 					  <a class="nav-link text-white" href="index.php?page=Pgestion">
 						  <i class="far fa-history"></i> Gestion des sauvegardes
 					  </a>
-					</li>			  
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="index.php?page=Pcontrol">
+							<i class="fas fa-cog"></i> Controle Avancée
+						</a>
+					</li>					
 				</ul>        
 			</div>
         </nav>

@@ -185,6 +185,13 @@ if(isset($_GET['page']) AND !empty($_GET['page']))
 		
 		$mySmarty->display("../templates/admin/Psrv.tpl");
 	}
+	else if($_GET['page'] == "Pcontrol")
+	{
+		$vars['nameSiteWeb'] = siteConf::SITENAME;
+		
+		$mySmarty->assign('vars', $vars);
+		$mySmarty->display("../templates/admin/Pcontrol.tpl");
+	}
 	
 }
 else
@@ -197,6 +204,24 @@ else
 	$vars['numberSie'] = $ftp->count_array($rep); 
 	$vars['numberSrvSite'] = $ftp->count_array($repSrvList);
 	$vars['key'] = $key->getKey();
+	
+	$espaceFree = disk_free_space("/");
+	$espaceTotal = disk_total_space("/");
+	$espceUsage = $espaceTotal-$espaceFree;
+
+function formatBytes($size, $precision = 2)
+{
+    $base = log($size, 1024);
+    $suffixes = array('', 'K', 'M', 'G', 'T');   
+
+    return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
+}
+
+	$vars['percentage'] = sprintf('%.0f',($espceUsage / $espaceTotal) * 100);
+	$vars['diskusage'] = formatBytes($espceUsage);
+	$vars['diskFree'] = formatBytes($espaceFree);
+	$vars['diskTotal'] = formatBytes($espaceTotal);
+				
 	$mySmarty->assign('vars', $vars);
 
 	$mySmarty->display("../templates/admin/Pdashborad.tpl");
