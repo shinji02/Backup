@@ -13,8 +13,10 @@
 	
     <link href="../templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="../templates/css/fontawesomepro/css/all.css" rel="stylesheet">
+	<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 
   <body>
@@ -79,12 +81,12 @@
 					</div>
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
-							<dt>Paraméter des backup</dt>
+							<dt>Paramètre des backups</dt>
 						</dl>
 					</div>
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
-							<dt>Paramétre des email</dt>
+							<dt>Paramètre des emails</dt>
 							<div class="row">
 								<div class="col-8">
 									<h6>Email de réussite du backup</h6>
@@ -97,7 +99,7 @@
 							</div>
 							<div class="row">
 								<div class="col-8">
-									<h6>Email d'echec du backup</h6>
+									<h6>Email d'échec du backup</h6>
 								</div>
 								<div class="col-4 text-center">
 									<label class="label-switch switch-success">																
@@ -109,7 +111,7 @@
 					</div>
 					<div class="pallete-item" style="width:  22%">
 						<dl class="palette palette-wet-asphalt">
-							<dt>Base de donnée</dt>
+							<dt>Base de données</dt>
 						</dl>
 					</div>
 				</div>
@@ -117,7 +119,6 @@
         </main>
       </div>
     </div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="../templates/admin/js/jquery-slim.min.js"><\/script>')</script>
     <script src="../templates/admin/js/popper.min.js"></script>
     <script src="../templates/admin/js/bootstrap.min.js"></script>	

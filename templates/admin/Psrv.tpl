@@ -16,6 +16,7 @@
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
 	<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
   </head>
 
   <body>

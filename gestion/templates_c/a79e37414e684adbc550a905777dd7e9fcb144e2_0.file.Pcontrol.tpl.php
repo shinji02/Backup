@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-27 10:45:19
+/* Smarty version 3.1.32, created on 2018-08-27 11:55:12
   from 'C:\wamp64\www\BackupManagement\templates\admin\Pcontrol.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b83d63fe1c394_06146118',
+  'unifunc' => 'content_5b83e6a073a1b0_59354599',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a79e37414e684adbc550a905777dd7e9fcb144e2' => 
     array (
       0 => 'C:\\wamp64\\www\\BackupManagement\\templates\\admin\\Pcontrol.tpl',
-      1 => 1535120057,
+      1 => 1535370878,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b83d63fe1c394_06146118 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b83e6a073a1b0_59354599 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -38,8 +38,14 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 	
     <link href="../templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="../templates/css/fontawesomepro/css/all.css" rel="stylesheet">
+	<?php echo '<script'; ?>
+ src="../templates/libs/jquery/jquery-3.2.1.min.js"><?php echo '</script'; ?>
+>
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
+	<?php echo '<script'; ?>
+ src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
+>
   </head>
 
   <body>
@@ -105,12 +111,12 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 					</div>
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
-							<dt>Paraméter des backup</dt>
+							<dt>Paramètre des backups</dt>
 						</dl>
 					</div>
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
-							<dt>Paramétre des email</dt>
+							<dt>Paramètre des emails</dt>
 							<div class="row">
 								<div class="col-8">
 									<h6>Email de réussite du backup</h6>
@@ -123,7 +129,7 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 							</div>
 							<div class="row">
 								<div class="col-8">
-									<h6>Email d'echec du backup</h6>
+									<h6>Email d'échec du backup</h6>
 								</div>
 								<div class="col-4 text-center">
 									<label class="label-switch switch-success">																
@@ -135,7 +141,7 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 					</div>
 					<div class="pallete-item" style="width:  22%">
 						<dl class="palette palette-wet-asphalt">
-							<dt>Base de donnée</dt>
+							<dt>Base de données</dt>
 						</dl>
 					</div>
 				</div>
@@ -143,9 +149,6 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
         </main>
       </div>
     </div>
-	<?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"><?php echo '</script'; ?>
->
 	<?php echo '<script'; ?>
 >window.jQuery || document.write('<?php echo '<script'; ?>
  src="../templates/admin/js/jquery-slim.min.js"><\/script>')<?php echo '</script'; ?>

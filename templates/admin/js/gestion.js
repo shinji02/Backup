@@ -29,9 +29,22 @@ $("#date").change(function(event){
 
 $("#emailSucess").change(function (event){
 	if ($("#emailSucess").val()  == 1)
+	{
 		$("#emailSucess").val("0");
+		$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "email="+$("#emailSucess").val(),
+			success: function(data)
+			{
+				eval(data); // show response from the php script.
+			}
+		});		
+	}
 	else
+	{
 		$("#emailSucess").val("1");
+	}
 });
 
 $("#emailError").change(function (event){
