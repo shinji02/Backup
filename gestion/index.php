@@ -11,7 +11,6 @@ use factory\factory;
 use MySmarty\MySmarty;
 use ftp\Cftp;
 use conf\siteConf;
-use PDO;
 use key\CKey;
 
 session_start();
@@ -209,13 +208,13 @@ else
 	$espaceTotal = disk_total_space("/");
 	$espceUsage = $espaceTotal-$espaceFree;
 
-function formatBytes($size, $precision = 2)
-{
-    $base = log($size, 1024);
-    $suffixes = array('', 'K', 'M', 'G', 'T');   
+	function formatBytes($size, $precision = 2)
+	{
+		$base = log($size, 1024);
+		$suffixes = array('', 'K', 'M', 'G', 'T');   
 
-    return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
-}
+		return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
+	}
 
 	$vars['percentage'] = sprintf('%.0f',($espceUsage / $espaceTotal) * 100);
 	$vars['diskusage'] = formatBytes($espceUsage);

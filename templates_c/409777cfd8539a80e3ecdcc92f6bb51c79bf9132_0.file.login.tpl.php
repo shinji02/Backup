@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-07-26 09:48:42
+/* Smarty version 3.1.32, created on 2018-08-27 10:42:54
   from 'C:\wamp64\www\BackupManagement\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b5998fa4cb6c9_41287357',
+  'unifunc' => 'content_5b83d5ae9b1e71_49609766',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '409777cfd8539a80e3ecdcc92f6bb51c79bf9132' => 
     array (
       0 => 'C:\\wamp64\\www\\BackupManagement\\templates\\login.tpl',
-      1 => 1532595771,
+      1 => 1533303937,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b5998fa4cb6c9_41287357 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b83d5ae9b1e71_49609766 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 	<head>
@@ -29,8 +29,13 @@ function content_5b5998fa4cb6c9_41287357 (Smarty_Internal_Template $_smarty_tpl)
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="icon" href="../../../../favicon.ico">
-
-		<title>SiteConseil.fr BackupMaganement</title>
+		<?php echo '<script'; ?>
+ type='text/javascript' src='templates/libs/jquery.particleground.js'><?php echo '</script'; ?>
+>
+		<?php echo '<script'; ?>
+ type='text/javascript' src='templates/libs/demo.js'><?php echo '</script'; ?>
+>
+		<title>SiteConseil BackupMaganement</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -43,19 +48,26 @@ function content_5b5998fa4cb6c9_41287357 (Smarty_Internal_Template $_smarty_tpl)
 		<?php echo '<script'; ?>
  src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
 >
+		<link rel="stylesheet" href="templates/css/style.css"/>
+		<link rel="stylesheet" href="templates/css/flat-ui.css"/>
+		<link rel="stylesheet" href="templates/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="templates/css/mystyle.css"/>
 	</head>
-
-	<body class="text-center">
-		<form id="formConnect" class="form-signin" action="" method="POST">
-			<h1 class="h3 mb-3 font-weight-normal">
-				Site Conseil<br>
-				Backup Management
-			</h1>
-			<label for="passwordConnect" class="sr-only">Email address</label>
-			<input id="passwordConnect" name="passwordConnect" type="text" class="form-control" placeholder="Mot de pase" required autofocus><br>
-			<button class="btn btn-lg btn-primary btn-block" id="formConnectSend" type="submit">Connection</button>
-		</form>
+	<body>
+		<div id="particles" class="back_cus">
+			<div id="intro" class="intro">
+				<form id="formConnect" class="form-signin" action="" method="POST">
+					<h2> Site Conseil <br> BackupManagement</h2>
+					<hr class="style-three">
+					<label for="passwordConnect" class="sr-only">Email address</label>
+					<input id="passwordConnect" name="passwordConnect" type="password" class="form-control" placeholder="Mot de pase" required autofocus><br>
+					<button class="btn btn-lg btn-primary btn-block" id="formConnectSend" type="submit">Connection</button>
+				</form>
+				<p class="text-center font-italic">Version 1.0</p>
+			</div>
+		</div>
 	</body>
+		
 	<?php echo '<script'; ?>
 >
 		$("#formConnect").submit(function(e) {
@@ -74,7 +86,7 @@ function content_5b5998fa4cb6c9_41287357 (Smarty_Internal_Template $_smarty_tpl)
 			e.preventDefault(); // avoid to execute the actual submit of the form.
 		});
 	<?php echo '</script'; ?>
->
+>-
 </html>
 
 <?php }
