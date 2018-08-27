@@ -85,9 +85,23 @@
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
 							<dt>Paramètre des backups</dt>
-							<div>
-								<a class="btn btn-block btn-custom">a</a>
-							</div>
+                            <br>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h6>Activer auto backup</h6>
+                                </div>
+                                <div>
+                                    <div class="col-4 text-center">
+                                        <label class="label-switch switch-success">
+                                            <input type="checkbox" class="switch-square switch-bootstrap status" name="activateAutoBackup" id="activateAutoBackup" value="{$vars['settings'][0].auto_backup}" {if $vars['settings'][0].auto_backup == 1}checked="checked"{/if}>
+                                            <span class="lable"></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="btn btn-block btn-custom">Lancer les backups</a>
+                            </div>
+
 						</dl>
 					</div>
 					<div class="pallete-item" style="width: 22%">
@@ -129,6 +143,18 @@
 					<div class="pallete-item" style="width:  22%">
 						<dl class="palette palette-wet-asphalt">
 							<dt>Base de données</dt>
+                            <br>
+                            <div>
+                                <a class="btn btn-block btn-custom">Purger les echec</a>
+                            </div>
+                            <br>
+                            <div>
+                                <a class="btn btn-block btn-custom">Exporter les sites</a>
+                            </div>
+                            <br>
+                            <div>
+                                <a class="btn btn-block btn-custom">Exporter la database</a>
+                            </div>
 						</dl>
 					</div>
 				</div>

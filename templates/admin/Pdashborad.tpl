@@ -12,10 +12,12 @@
     <!-- Bootstrap core CSS -->
     <link href="../templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="../templates/css/fontawesomepro/css/all.css" rel="stylesheet">
+	  <script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
 	<link href="../templates/admin/css/circle.css" rel="stylesheet">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	  <script src="../../libs/sweetAlert/sweetalert.min.js"></script>
+	  <link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
   </head>
 
   <body>
@@ -123,7 +125,6 @@
         </main>
       </div>
     </div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="../templates/admin/js/jquery-slim.min.js"><\/script>')</script>
     <script src="../templates/admin/js/popper.min.js"></script>
     <script src="../templates/admin/js/bootstrap.min.js"></script>

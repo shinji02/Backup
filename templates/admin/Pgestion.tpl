@@ -15,6 +15,8 @@
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
 	<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
+	  <script src="../../libs/sweetAlert/sweetalert.min.js"></script>
+	  <link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
   </head>
 
   <body>

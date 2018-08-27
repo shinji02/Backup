@@ -545,5 +545,9 @@ input[type=password] {
 } 
 
 .btn-custom{
-	
+	border: solid;
+    border-radius: 25px;
+    margin: 0 auto;
+    background-color: #495057;
+    font-size: 15px;
 }
