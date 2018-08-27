@@ -16,7 +16,9 @@
 	<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="../../libs/sweetAlert/sweetalert.min.js"></script>
+	<link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
+	 
   </head>
 
   <body>
@@ -72,6 +74,7 @@
 			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
 				<h1 class="h2">Controle Avancée</h1>
 			 </div>
+
 			<div class="row">
 				<div class="swatches-col" style="width: 100%">
 					<div class="pallete-item" style="width:22%">
@@ -82,18 +85,22 @@
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
 							<dt>Paramètre des backups</dt>
+							<div>
+								<a class="btn btn-block btn-custom">a</a>
+							</div>
 						</dl>
 					</div>
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
 							<dt>Paramètre des emails</dt>
+							<br>
 							<div class="row">
 								<div class="col-8">
 									<h6>Email de réussite du backup</h6>
 								</div>
 								<div class="col-4 text-center">
 									<label class="label-switch switch-success">																
-									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailSucess" id="emailSucess" value="1" checked="checked">
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailSucess" id="emailSucess" value="{$vars['settings'][0].send_email_success}" {if $vars['settings'][0].send_email_success == 1}checked="checked"{/if}>
 									<span class="lable"></span></label>
 								</div>
 							</div>
@@ -103,7 +110,17 @@
 								</div>
 								<div class="col-4 text-center">
 									<label class="label-switch switch-success">																
-									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailError" id="emailError" value="1" checked="checked">
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailError" id="emailError" value="{$vars['settings'][0].send_email_error}" {if $vars['settings'][0].send_email_error == 1}checked="checked"{/if}>
+									<span class="lable"></span></label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-8">
+									<h6>Email d'information</h6>
+								</div>
+								<div class="col-4 text-center">
+									<label class="label-switch switch-success">																
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailInfo" id="emailInfo" value="{$vars['settings'][0].send_email_info}" {if $vars['settings'][0].send_email_info == 1}checked="checked"{/if}>
 									<span class="lable"></span></label>
 								</div>
 							</div>

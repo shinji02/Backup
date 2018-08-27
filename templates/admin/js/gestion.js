@@ -28,28 +28,116 @@ $("#date").change(function(event){
 });
 
 $("#emailSucess").change(function (event){
-	if ($("#emailSucess").val()  == 1)
+	emailSucess = $("#emailSucess").val();
+	emailError = $("#emailError").val();
+	emailInfo = $("#emailInfo").val();
+	if(emailSucess == 1)
 	{
-		$("#emailSucess").val("0");
+		$("#emailSucess").val(0);
+		emailSucess = $("#emailSucess").val();
+		emailError = $("#emailError").val();
+		emailInfo = $("#emailInfo").val();
 		$.ajax({
 			type: "POST",
 			url: "crlGestion.php",
-			data: "email="+$("#emailSucess").val(),
+			data: "emailSucess="+emailSucess+"&emailError="+emailError+"&emailInfo="+emailInfo,
 			success: function(data)
 			{
 				eval(data); // show response from the php script.
 			}
-		});		
+		});
 	}
-	else
+	else if(emailSucess == 0)
 	{
-		$("#emailSucess").val("1");
+		$("#emailSucess").val(1);
+		emailSucess = $("#emailSucess").val();
+		emailError = $("#emailError").val();
+		emailInfo = $("#emailInfo").val();
+		$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "emailSucess="+emailSucess+"&emailError="+emailError+"&emailInfo="+emailInfo,
+			success: function(data)
+			{
+				eval(data); // show response from the php script.
+			}
+		});
 	}
 });
 
 $("#emailError").change(function (event){
-	if ($("#emailError").val()  == 1)
-		$("#emailError").val("0");
-	else
-		$("#emailError").val("1");
+	emailSucess = $("#emailSucess").val();
+	emailError = $("#emailError").val();
+	emailInfo = $("#emailInfo").val();
+	if(emailError == 1)
+	{
+		$("#emailError").val(0);
+		emailSucess = $("#emailSucess").val();
+		emailError = $("#emailError").val();
+		emailInfo = $("#emailInfo").val();
+		$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "emailSucess="+emailSucess+"&emailError="+emailError+"&emailInfo="+emailInfo,
+			success: function(data)
+			{
+
+				eval(data); // show response from the php script.
+			}
+		});
+	}
+	else if(emailError == 0)
+	{
+		$("#emailError").val(1);
+		emailSucess = $("#emailSucess").val();
+		emailError = $("#emailError").val();
+		emailInfo = $("#emailInfo").val();
+		$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "emailSucess="+emailSucess+"&emailError="+emailError+"&emailInfo="+emailInfo,
+			success: function(data)
+			{
+				eval(data); // show response from the php script.
+			}
+		});
+	}
+});
+$("#emailInfo").change(function (event){
+	emailSucess = $("#emailSucess").val();
+	emailError = $("#emailError").val();
+	emailInfo = $("#emailInfo").val();
+	if(emailInfo == 1)
+	{
+		$("#emailInfo").val(0);
+		emailSucess = $("#emailSucess").val();
+		emailError = $("#emailError").val();
+		emailInfo = $("#emailInfo").val();
+		$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "emailSucess="+emailSucess+"&emailError="+emailError+"&emailInfo="+emailInfo,
+			success: function(data)
+			{
+
+				eval(data); // show response from the php script.
+			}
+		});
+	}
+	else if(emailInfo == 0)
+	{
+		$("#emailInfo").val(1);
+		emailSucess = $("#emailSucess").val();
+		emailError = $("#emailError").val();
+		emailInfo = $("#emailInfo").val();
+		$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "emailSucess="+emailSucess+"&emailError="+emailError+"&emailInfo="+emailInfo,
+			success: function(data)
+			{
+				eval(data); // show response from the php script.
+			}
+		});
+	}
 });

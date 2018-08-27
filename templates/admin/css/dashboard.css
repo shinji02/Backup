@@ -543,3 +543,7 @@ input[type=password] {
 .switch-square.switch-bootstrap + .lable::after {
 	border-radius: 2px;
 } 
+
+.btn-custom{
+	
+}

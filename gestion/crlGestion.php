@@ -4,20 +4,22 @@ require_once '../phpClass/Cfactory.php';
 require_once '../conf/dataBase.php';
 
 use factory\factory;
-use PDO;
 use ftp\Cftp;
 
 $bdd = factory::getInstance();
 
-if($_POST['email'] == 0)
+if(isset($_POST['emailSucess']) && isset($_POST['emailError']) && isset($_POST['emailInfo']))
 {
 	$hooks = array(
-		array($_POST['emaim'], PDO::PARAM_BOOL),
+		array($_POST['emailSucess'],PDO::PARAM_BOOL),
+		array($_POST['emailError'],PDO::PARAM_BOOL),
+		array($_POST['emailInfo'],PDO::PARAM_BOOL),
 	);
-	$bdd->query("INSERT INTO `options` VALUES(?)");
-	echo 'swal("Modification!", "Modification effectuer!", "error");';
-}
-else if($_POST['email'] == 1)
-{
 	
+	$bdd->query("UPDATE `options` SET send_email_success=?,send_email_error=?,send_email_info=? WHERE id_options=1",$hooks);
+	echo 'swal("Modification!", "La modification vient d\'étre effectuer!", "success")';
+}
+else
+{
+	echo 'swal("Error!", "Une erreur est survenu!", "error")';
 }

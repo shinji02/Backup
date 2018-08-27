@@ -186,6 +186,7 @@ if(isset($_GET['page']) AND !empty($_GET['page']))
 	}
 	else if($_GET['page'] == "Pcontrol")
 	{
+		$vars['settings'] = $bdd->query("SELECT * FROM `options` WHERE id_options=1");
 		$vars['nameSiteWeb'] = siteConf::SITENAME;
 		
 		$mySmarty->assign('vars', $vars);

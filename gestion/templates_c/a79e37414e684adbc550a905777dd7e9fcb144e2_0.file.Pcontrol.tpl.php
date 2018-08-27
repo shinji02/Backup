@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-27 11:55:12
+/* Smarty version 3.1.32, created on 2018-08-27 12:55:33
   from 'C:\wamp64\www\BackupManagement\templates\admin\Pcontrol.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b83e6a073a1b0_59354599',
+  'unifunc' => 'content_5b83f4c553ea79_35618705',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a79e37414e684adbc550a905777dd7e9fcb144e2' => 
     array (
       0 => 'C:\\wamp64\\www\\BackupManagement\\templates\\admin\\Pcontrol.tpl',
-      1 => 1535370878,
+      1 => 1535374474,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b83e6a073a1b0_59354599 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b83f4c553ea79_35618705 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -44,8 +44,10 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
     <!-- Custom styles for this template -->
     <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
 	<?php echo '<script'; ?>
- src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
+ src="../../libs/sweetAlert/sweetalert.min.js"><?php echo '</script'; ?>
 >
+	<link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
+	 
   </head>
 
   <body>
@@ -102,6 +104,7 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
 				<h1 class="h2">Controle Avancée</h1>
 			 </div>
+
 			<div class="row">
 				<div class="swatches-col" style="width: 100%">
 					<div class="pallete-item" style="width:22%">
@@ -112,18 +115,23 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
 							<dt>Paramètre des backups</dt>
+							<div>
+								<a class="btn btn-block btn-custom">a</a>
+							</div>
 						</dl>
 					</div>
 					<div class="pallete-item" style="width: 22%">
 						<dl class="palette palette-wet-asphalt">
 							<dt>Paramètre des emails</dt>
+							<br>
 							<div class="row">
 								<div class="col-8">
 									<h6>Email de réussite du backup</h6>
 								</div>
 								<div class="col-4 text-center">
 									<label class="label-switch switch-success">																
-									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailSucess" id="emailSucess" value="1" checked="checked">
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailSucess" id="emailSucess" value="<?php echo $_smarty_tpl->tpl_vars['vars']->value['settings'][0]['send_email_success'];?>
+" <?php if ($_smarty_tpl->tpl_vars['vars']->value['settings'][0]['send_email_success'] == 1) {?>checked="checked"<?php }?>>
 									<span class="lable"></span></label>
 								</div>
 							</div>
@@ -133,7 +141,19 @@ echo $_smarty_tpl->tpl_vars['vars']->value['nameSiteWeb'];
 								</div>
 								<div class="col-4 text-center">
 									<label class="label-switch switch-success">																
-									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailError" id="emailError" value="1" checked="checked">
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailError" id="emailError" value="<?php echo $_smarty_tpl->tpl_vars['vars']->value['settings'][0]['send_email_error'];?>
+" <?php if ($_smarty_tpl->tpl_vars['vars']->value['settings'][0]['send_email_error'] == 1) {?>checked="checked"<?php }?>>
+									<span class="lable"></span></label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-8">
+									<h6>Email d'information</h6>
+								</div>
+								<div class="col-4 text-center">
+									<label class="label-switch switch-success">																
+									<input type="checkbox" class="switch-square switch-bootstrap status" name="emailInfo" id="emailInfo" value="<?php echo $_smarty_tpl->tpl_vars['vars']->value['settings'][0]['send_email_info'];?>
+" <?php if ($_smarty_tpl->tpl_vars['vars']->value['settings'][0]['send_email_info'] == 1) {?>checked="checked"<?php }?>>
 									<span class="lable"></span></label>
 								</div>
 							</div>
