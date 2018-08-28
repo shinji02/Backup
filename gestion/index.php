@@ -38,7 +38,7 @@ if(isset($_GET['page']) AND !empty($_GET['page']))
 		$vars['listSite']=$rep;
 		$mySmarty->assign('vars', $vars);
 
-		$respSrv = $bdd->query("SELECT * FROM srv_ftp");		
+		$respSrv = $bdd->query("SELECT * FROM srv_ftp");
 		$mySmarty->assign('srv',$respSrv);
 		if(isset($_GET['modif']) && isset($_GET['idSite']) && $_GET['modif'] == 1)
 		{
@@ -52,7 +52,7 @@ if(isset($_GET['page']) AND !empty($_GET['page']))
 				);
 			}
 			$respFftpSrv = $bdd->query("SELECT * FROM srv_ftp WHERE id=?",$hooks2);
-			$mySmarty->assign("infoSite",$valueSiteInfo);
+			$mySmarty->assign("infoSite",$respInfoSite);
 			$mySmarty->assign("ftpInfo",$respFftpSrv[0]);
 		}
 		else if(isset($_GET['delete']) && isset($_GET['idSite']) && $_GET['delete'] == 1)

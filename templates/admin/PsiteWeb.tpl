@@ -119,7 +119,7 @@
 				<label for="selectServeur">Choix du serveur</label>
 				<select class="form-control select_custom" name="selectServeur" id="selectServeur">
 					{foreach from=$srv item=foo}
-						<option value="{$foo.id}" {if $foo.id == $infoSite['id']}selected{/if}>{if $foo.id == $infoSite['id']}{$ftpInfo['name__srv']}{else}{$foo.name__srv}{/if}</option>
+						<option value="{$foo.id}" {if isset($infoSite)}{if $foo.id == $infoSite['id']}{/if}selected{/if}>{if isset($infoSite)}{if $foo.id == $infoSite['id']}{$ftpInfo['name__srv']}{else}{$foo.name__srv}{/if}{else}{$foo.name__srv}{/if}</option>
 					{/foreach}
 				  
 				</select>
