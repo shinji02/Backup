@@ -99,7 +99,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a class="btn btn-block btn-custom">Lancer les backups</a>
+                                <a id="launchBackup" class="btn btn-block btn-custom">Lancer les backups</a>
                             </div>
 
 						</dl>
