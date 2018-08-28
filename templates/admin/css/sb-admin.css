@@ -373,3 +373,11 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+.fexwid {
+  flex-basis: 100px;
+  min-width: 250px;
+}
+.table-Gestion{
+  max-height: 405px;
+  overflow-y: auto;
+}
