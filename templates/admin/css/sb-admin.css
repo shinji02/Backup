@@ -381,3 +381,7 @@ body.sidebar-toggled footer.sticky-footer {
   max-height: 405px;
   overflow-y: auto;
 }
+.color_nav_cus
+{
+  background-color: #0072b5;
+}

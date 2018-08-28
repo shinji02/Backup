@@ -21,7 +21,7 @@
   </head>
 
   <body id="page-top">
-	  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+	  <nav class="navbar navbar-expand navbar-dark bg-primary static-top">
 		  <a class="navbar-brand mr-1" href="index.html">{$vars.nameSiteWeb}</a>
 		  <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
 			  <i class="fas fa-bars"></i>
@@ -32,10 +32,10 @@
 
 	  </nav>
 	  <div id="wrapper">
-		  <ul class="sidebar navbar-nav custom-na">
+		  <ul class="sidebar navbar-nav custom-na color_nav_cus">
 			  <li class="nav-item active">
 				  <a class="nav-link" href="index.php">
-					  <i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
+					  <i class="far fa-home"></i>Panel administration <span class="sr-only">(current)</span>
 				  </a>
 			  </li>
 			  <li class="nav-item ">
