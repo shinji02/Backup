@@ -50,7 +50,7 @@
 			</li>
 			<li class="nav-item ">
 				<a class="nav-link" href="index.php?page=Pgestion">
-					<i class="far fa-book"></i> Gestion des  <span class="sr-only">(current)</span>
+					<i class="far fa-book"></i> Gestion des sauvegardes<span class="sr-only">(current)</span>
 				</a>
 			</li>
 			<li class="nav-item ">
