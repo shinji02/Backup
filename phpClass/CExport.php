@@ -6,7 +6,7 @@
  * Time: 16:53
  */
 
-namespace ftp;
+namespace export;
 
 
 class CExport
