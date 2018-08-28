@@ -14,16 +14,22 @@ use conf\security;
 session_start();
 if(isset($_GET['connect']) && ($_GET['connect'] != null))
 {
-	if(isset($_POST['passwordConnect']) && ($_POST['passwordConnect'] != null))
+	if(isset($_POST['passwordConnect']) && ($_POST['passwordConnect'] != null && $_POST['usernameConnect']) && ($_POST['usernameConnect'] != null))
 	{
-		if($_POST['passwordConnect'] == security::PASSWORD)
+		$hooks = array(
+			array($_POST['usernameConnect'], PDO::PARAM_STR),
+			array(sha1($_POST['passwordConnect']), PDO::PARAM_STR)
+		);
+		$bdd = factory::getInstance();
+		$auth = $bdd->query("SELECT COUNT(*) FROM account WHERE `user`=? AND password=?",$hooks);
+		if($auth[0]['COUNT(*)'] ==1)
 		{
 			$_SESSION['connect'] = 1;
 			echo "window.location.href = 'gestion/';";
 		}
 		else
 		{
-			echo 'swal("Erreur!", "Mot de passe incorrect!", "error")';
+			echo 'swal("Erreur!", "Utilisateur ou Mot de passe incorrect!", "error")';
 		}
 	}
 	else

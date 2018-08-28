@@ -16,7 +16,8 @@
 		<!-- Custom styles for this template -->
 		<link href="templates/css/cssPage/signin.css" rel="stylesheet">
 		<script src="templates/libs/jquery/jquery-3.2.1.min.js"></script>
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="../libs/sweetAlert/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="../libs/sweetAlert/sweetalert.css"/>
 		<link rel="stylesheet" href="templates/css/style.css"/>
 		<link rel="stylesheet" href="templates/css/flat-ui.css"/>
 		<link rel="stylesheet" href="templates/css/bootstrap.min.css"/>
@@ -28,6 +29,8 @@
 				<form id="formConnect" class="form-signin" action="" method="POST">
 					<h2> Site Conseil <br> BackupManagement</h2>
 					<hr class="style-three">
+					<label for="usernameConnect" class="sr-only">Email address</label>
+					<input id="usernameConnect" name="usernameConnect" type="text" class="form-control" placeholder="Utilisateur" required autofocus><br>
 					<label for="passwordConnect" class="sr-only">Email address</label>
 					<input id="passwordConnect" name="passwordConnect" type="password" class="form-control" placeholder="Mot de pase" required autofocus><br>
 					<button class="btn btn-lg btn-primary btn-block" id="formConnectSend" type="submit">Connection</button>

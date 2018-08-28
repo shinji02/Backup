@@ -23,6 +23,11 @@
 	$myFtp->checkDate($site);
 	$allSite = $bdd->query("SELECT * FROM list_site");
 	$statusBackup = $bdd->query("SELECT * FROM list_site WHERE backup_active = 0");
+	$disk = $myFtp->checkSpaceDisk();
+	if($disk['percentage'] >= 75)
+	{
+		CMail::send_email_info("Backup: Attention l'espace disque arrive à satureation", "Il ne reste que ".(100-$disk['percentage'])." % disponible");
+	}
 	if(count($statusBackup  == 0))
 	{
 		$bdd->query("UPDATE list_site SET backup_active=0 WHERE 1");

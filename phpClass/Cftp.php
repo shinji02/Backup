@@ -199,6 +199,21 @@ class Cftp {
 	{
 		ssh2_disconnect($this->ftpId);
 	}
+	
+	public function checkSpaceDisk()
+	{
+		$diskFree = disk_free_space("/");
+		$diskTotal = disk_total_space("/");
+		$diskUsage = $diskTotal-$diskFree;
+		
+		$hooks = array(
+			"disk_free" => $diskFree,
+			"disk_total" => $diskTotal,
+			"disk_usage" => $diskUsage,
+			"percentage" =>  sprintf('%.0f',($diskUsage / $diskTotal) * 100),
+		);
+		return $hooks;
+	}
 
 	public function __destruct() {
 		

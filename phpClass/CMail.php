@@ -8,12 +8,13 @@ require_once dirname(__FILE__).'/../libs/phpMailer/SMTP.php';
 require_once dirname(__FILE__).'/../conf/backup.php';
 require_once dirname(__FILE__).'/../conf/dataBase.php';
 require_once dirname(__FILE__).'/Cfactory.php';
-
+require_once dirname(__FILE__).'/../conf/MessageConf.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 use conf\backup;
 use factory\factory;
+use conf\MessageConf;
 
 class CMail {
 
@@ -41,8 +42,8 @@ class CMail {
 			{
 				$mail->addAddress($msg);
 			}
-			$mail->Subject = 'Rapport des backup';
-			$mail->msgHTML("<html>Backup des site effectuer</html>");
+			$mail->Subject = MessageConf::$TITLE_BACKUP_ALL;
+			$mail->msgHTML("<html>".MessageConf::$TITLE_BACKUP_ALL."</html>");
 			$mail->AltBody = 'This is a plain-text message body';
 			$mail->addStringAttachment($doc, "rapport.pdf","base64","application/pdf");
 			if (!$mail->send()) {
@@ -69,8 +70,8 @@ class CMail {
 			{
 				$mail->addAddress($msg);
 			}
-			$mail->Subject = 'Backup du site: '.$siteName;
-			$mail->msgHTML("<html>".$message."</html>");
+			$mail->Subject = str_replace("{sitename}", $siteName, MessageConf::$TITLE_BACKUP_ECHEC);
+			$mail->msgHTML("<html>".str_replace("{sitename}",$siteName,MessageConf::$MESSAGE_BACKUP_ECHE)."</html>");
 			$mail->AltBody = 'This is a plain-text message body';
 			//Attach an image file
 
@@ -80,7 +81,7 @@ class CMail {
 		}
 	}
 	
-		public function send_email_info($message)
+		public static function send_email_info($title,$message)
 	{
 		$bdd = factory::getInstance();
 		$query = $bdd->query("SELECT * FROM `options` WHERE id_options = 1");
@@ -98,7 +99,7 @@ class CMail {
 			{
 				$mail->addAddress($msg);
 			}
-			$mail->Subject = 'Backup';
+			$mail->Subject = $title;
 			$mail->msgHTML("<html>".$message."</html>");
 			$mail->AltBody = 'This is a plain-text message body';
 			//Attach an image file
