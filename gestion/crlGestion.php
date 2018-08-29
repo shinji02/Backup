@@ -20,6 +20,10 @@ if(isset($_POST['emailSucess']) && isset($_POST['emailError']) && isset($_POST['
 	$bdd->query("UPDATE `options` SET send_email_success=?,send_email_error=?,send_email_info=?,auto_backup=? WHERE id_options=1",$hooks);
 	echo 'swal("Modification!", "La modification vient d\'étre effectuer!", "success")';
 }
+else if(isset($_POST['exportSite']))
+{
+	echo 'swal("Exportation!", "l\'exportation vient dêtre terminer !", "success")'; 
+}
 else
 {
 	echo 'swal("Error!", "Une erreur est survenu!", "error")';

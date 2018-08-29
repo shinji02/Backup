@@ -40,17 +40,17 @@
 			  </li>
 			  <li class="nav-item ">
 				  <a class="nav-link" href="index.php?page=PsiteWeb">
-					  <i class="far fa-book"></i> Gestion des sites <span class="sr-only">(current)</span>
+					  <i class="far fa-browser"></i> Gestion des sites <span class="sr-only">(current)</span>
 				  </a>
 			  </li>
 			  <li class="nav-item ">
 				  <a class="nav-link" href="index.php?page=Psrv">
-					  <i class="far fa-book"></i> Gestion des serveurs de sauvegarde <span class="sr-only">(current)</span>
+					  <i class="far fa-server"></i> Gestion des serveurs de sauvegarde <span class="sr-only">(current)</span>
 				  </a>
 			  </li>
 			  <li class="nav-item ">
 				  <a class="nav-link" href="index.php?page=Pgestion">
-					  <i class="far fa-book"></i> Gestion des sauvegardes<span class="sr-only">(current)</span>
+					  <i class="far fa-history"></i> Gestion des sauvegardes<span class="sr-only">(current)</span>
 				  </a>
 			  </li>
 			  <li class="nav-item ">

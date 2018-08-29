@@ -200,7 +200,7 @@ $("#launchBackup").click(function (event){
 			data: "",
 			success: function(data)
 			{
-				swal("Error!", "Les backup ont été effectuer!", "success");
+				swal("Success!", "Les backup ont été effectuer!", "success");
 			}
 		});
 });
