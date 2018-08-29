@@ -204,3 +204,17 @@ $("#launchBackup").click(function (event){
 			}
 		});
 });
+
+$("#purgeEchec").click(function (event)
+{
+	event.preventDefault();
+	$.ajax({
+			type: "POST",
+			url: "crlGestion.php",
+			data: "delete=1",
+			success: function(data)
+			{
+				eval(data);
+			}
+		});
+});

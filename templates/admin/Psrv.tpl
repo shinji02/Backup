@@ -21,44 +21,44 @@
 </head>
 
 <body id="page-top">
-<nav class="navbar navbar-expand navbar-dark bg-primary static-top">
-	<a class="navbar-brand mr-1" href="index.html">{$vars.nameSiteWeb}</a>
-	<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-		<i class="fas fa-bars"></i>
-	</button>
-	<div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-		<a title="Deconnection" class="nav-link text-light" href="../index.php?deconnect=1"><i class="far fa-power-off"></i></a>
-	</div>
+	<nav class="navbar navbar-expand navbar-dark bg-primary static-top">
+		<a class="navbar-brand mr-1" href="index.html">{$vars.nameSiteWeb}</a>
+		<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+			<a title="Deconnection" class="nav-link text-light" href="../index.php?deconnect=1"><i class="far fa-power-off"></i></a>
+		</div>
 
-</nav>
-<div id="wrapper">
-	<ul class="sidebar navbar-nav color_nav_cus">
-		<li class="nav-item">
-			<a class="nav-link" href="index.php">
-				<i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
-			</a>
-		</li>
-		<li class="nav-item ">
-			<a class="nav-link" href="index.php?page=PsiteWeb">
-				<i class="far fa-book"></i> Gestion des sites <span class="sr-only">(current)</span>
-			</a>
-		</li>
-		<li class="nav-item active">
-			<a class="nav-link" href="index.php?page=Psrv">
-				<i class="far fa-book"></i> Gestion des serveurs de sauvegarde <span class="sr-only">(current)</span>
-			</a>
-		</li>
-		<li class="nav-item ">
-			<a class="nav-link" href="index.php?page=Pgestion">
-				<i class="far fa-book"></i> Gestion des sauvegardes <span class="sr-only">(current)</span>
-			</a>
-		</li>
-		<li class="nav-item ">
-			<a class="nav-link" href="index.php?page=Pcontrol">
-				<i class="fas fa-cog"></i> Controle Avancée
-			</a>
-		</li>
-	</ul>
+	</nav>
+	<div id="wrapper">
+		  <ul class="sidebar navbar-nav custom-na color_nav_cus">
+			  <li class="nav-item">
+				  <a class="nav-link" href="index.php">
+					  <i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item">
+				  <a class="nav-link" href="index.php?page=PsiteWeb">
+					  <i class="far fa-browser"></i> Gestion des sites <span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item active">
+				  <a class="nav-link" href="index.php?page=Psrv">
+					  <i class="far fa-server"></i> Gestion des serveurs de sauvegarde <span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item ">
+				  <a class="nav-link" href="index.php?page=Pgestion">
+					  <i class="far fa-history"></i> Gestion des sauvegardes<span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item ">
+				  <a class="nav-link" href="index.php?page=Pcontrol">
+					  <i class="fas fa-cog"></i> Controle Avancée
+				  </a>
+			  </li>
+		  </ul>
 	<div id="content-wrapper">
 		<div class="container-fluid">
 			<h1 class="h2">Gestion des serveurs de sauvegarde</h1>

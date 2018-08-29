@@ -385,3 +385,18 @@ body.sidebar-toggled footer.sticky-footer {
 {
   background-color: #0072b5;
 }
+.table-Gestion2{
+  max-height: 700px;
+  overflow-y: auto;
+  background-color: #000000;
+}
+.backgroundBlack{
+	background-color: black;
+	color: white;
+	
+}
+.tableHeight{
+	max-height: 722px;
+	overflow-y: auto;
+	font-weight: bold;
+}

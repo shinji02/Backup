@@ -53,7 +53,7 @@
 					</li>		  
 					<li class="nav-item">
 					  <a class="nav-link text-white" href="index.php?page=Psrv">
-						  <i class="far fa-cog"></i> Gestion des serveurs de sauvegarde
+						  <i class="far fa-server"></i> Gestion des serveurs de sauvegarde
 					  </a>
 					</li>
 					<li class="nav-item">
@@ -145,15 +145,7 @@
 							<dt>Base de données</dt>
                             <br>
                             <div>
-                                <a class="btn btn-block btn-custom">Purger les echec</a>
-                            </div>
-                            <br>
-                            <div>
-                                <a class="btn btn-block btn-custom">Exporter les sites</a>
-                            </div>
-                            <br>
-                            <div>
-                                <a class="btn btn-block btn-custom">Exporter la database</a>
+                                <a id="purgeEchec" class="btn btn-block btn-custom">Purger les echec</a>
                             </div>
 						</dl>
 					</div>

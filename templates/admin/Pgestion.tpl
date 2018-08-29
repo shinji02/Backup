@@ -1,78 +1,65 @@
-
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-	
-    <title>{if isset($vars.nameSiteWeb)}{$vars.nameSiteWeb}{else}Sans titre{/if}</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../../../favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link href="../templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-	<link href="../templates/css/fontawesomepro/css/all.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="../templates/admin/css/dashboard.css" rel="stylesheet">
-	<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
-	  <script src="../../libs/sweetAlert/sweetalert.min.js"></script>
-	  <link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
-  </head>
+		<title>{if isset($vars.nameSiteWeb)}{$vars.nameSiteWeb}{else}Sans titre{/if}</title>
 
-  <body>
-    <nav class="navbar navbar-dark sticky-top bg-blue flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.php">{$vars.nameSiteWeb}</a>
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link text-light" href="../index.php?deconnect=1"><i class="far fa-power-off"></i> Deconnection</a>
-        </li>
-      </ul>
-    </nav>
+		<!-- Bootstrap core CSS -->
+		<link href="../templates/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="../templates/css/fontawesomepro/css/all.css" rel="stylesheet">
+		<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
+		<!-- Custom styles for this template -->
+		<link href="../templates/admin/css/sb-admin.css" rel="stylesheet">
+		<link href="../templates/admin/css/circle.css" rel="stylesheet">
+		<script src="../../libs/sweetAlert/sweetalert.min.js"></script>
+		<link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
+	</head>
 
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block sidebar bg-blue">
-			<div class="sidebar-sticky">
-				<ul class="nav flex-column">
-					<li class="nav-item">
-						<a class="nav-link active" href="index.php">
-							<i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="index.php">
-						<i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
-						</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link text-white" href="index.php?page=PsiteWeb">
-						  <i class="far fa-book"></i> Gestion des sites
-					  </a>
-					</li>		  
-					<li class="nav-item">
-					  <a class="nav-link text-white" href="index.php?page=Psrv">
-						  <i class="far fa-cog"></i> Gestion des serveurs de sauvegarde
-					  </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white blueac" href="index.php?page=Pgestion">
-							<i class="far fa-history"></i> Gestion des sauvegardes
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="index.php?page=Pcontrol">
-							<i class="fas fa-cog"></i> Controle Avancée
-						</a>
-					</li>					
-				</ul>        
+	<body id="page-top">
+		<nav class="navbar navbar-expand navbar-dark bg-primary static-top">
+			<a class="navbar-brand mr-1" href="index.html">{$vars.nameSiteWeb}</a>
+			<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+				<a title="Deconnection" class="nav-link text-light" href="../index.php?deconnect=1"><i class="far fa-power-off"></i></a>
 			</div>
-        </nav>
 
-
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-				<h1 class="h2">Gestion  des sauvegarde</h1>
-			</div>
+		</nav>
+	<div id="wrapper">
+		  <ul class="sidebar navbar-nav custom-na color_nav_cus">
+			  <li class="nav-item">
+				  <a class="nav-link" href="index.php">
+					  <i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item">
+				  <a class="nav-link" href="index.php?page=PsiteWeb">
+					  <i class="far fa-browser"></i> Gestion des sites <span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item ">
+				  <a class="nav-link" href="index.php?page=Psrv">
+					  <i class="far fa-server"></i> Gestion des serveurs de sauvegarde <span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item active">
+				  <a class="nav-link" href="index.php?page=Pgestion">
+					  <i class="far fa-history"></i> Gestion des sauvegardes<span class="sr-only">(current)</span>
+				  </a>
+			  </li>
+			  <li class="nav-item ">
+				  <a class="nav-link" href="index.php?page=Pcontrol">
+					  <i class="fas fa-cog"></i> Controle Avancée
+				  </a>
+			  </li>
+		  </ul>
+		  <div id="content-wrapper">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="form-group">
@@ -96,9 +83,9 @@
 					</div>
 				</div>
 			</div>
-			<div id="listeSire">
-				<div class="d-flex p-2 bg-light text-white fexwid table-Gestion" >
-					<table class="table borderTable">
+			<div class="col-xs-12">
+				<div class="backgroundBlack tableHeight">
+					<table class="table backgroundBlack">
 						<thead class="thead-dark">
 							<tr>
 								<th scope="col">#</th>
@@ -111,7 +98,7 @@
 						<tbody>
 							{foreach from=$site key=k item=foo}
 								<tr>
-									<td class="siteTitle" colspan="5">{$foo['name']}</td>
+									<td class="siteTitle text-center" colspan="5">{$foo['name']}</td>
 								</tr>
 								{foreach from=$backup key=k2 item=foo2}
 
@@ -142,13 +129,12 @@
 							{/foreach}			
 						</tbody>
 					</table>
-				</div>					
-			</div>
-        </main>
-      </div>
-    <script src="../templates/admin/js/popper.min.js"></script>
-    <script src="../templates/admin/js/bootstrap.min.js"></script>
-	<script src="../templates/admin/js/gestion.js"></script>
-  </body>
-</html>
-</html>
+				</div>
+			</div>				
+		</div>
+		<script src="../templates/admin/js/popper.min.js"></script>
+		<script src="../templates/admin/js/bootstrap.min.js"></script>
+		<script src="../templates/admin/js/gestion.js"></script>
+	  </body>
+	</html>
+	</html>

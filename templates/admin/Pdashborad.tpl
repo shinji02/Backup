@@ -35,7 +35,7 @@
 		  <ul class="sidebar navbar-nav custom-na color_nav_cus">
 			  <li class="nav-item active">
 				  <a class="nav-link" href="index.php">
-					  <i class="far fa-home"></i>Panel administration <span class="sr-only">(current)</span>
+					  <i class="far fa-home"></i> Panel administration <span class="sr-only">(current)</span>
 				  </a>
 			  </li>
 			  <li class="nav-item ">
