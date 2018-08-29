@@ -396,3 +396,15 @@
 .switch-square.switch-bootstrap + .lable::after {
 	border-radius: 2px;
 } 
+.btn-custom{
+	border: solid;
+    border-radius: 25px;
+    margin: 0 auto;
+    background-color: #495057;
+    font-size: 15px;
+}
+
+.tr-black{
+	background-color: white;
+	color: black;
+}

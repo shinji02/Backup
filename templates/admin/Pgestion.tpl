@@ -15,6 +15,7 @@
 		<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
 		<!-- Custom styles for this template -->
 		<link href="../templates/admin/css/sb-admin.css" rel="stylesheet">
+		<link href="../templates/admin/css/switch.css" rel="stylesheet">
 		<link href="../templates/admin/css/circle.css" rel="stylesheet">
 		<script src="../../libs/sweetAlert/sweetalert.min.js"></script>
 		<link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
@@ -97,13 +98,13 @@
 						</thead>
 						<tbody>
 							{foreach from=$site key=k item=foo}
-								<tr>
+								<tr class="">
 									<td class="siteTitle text-center" colspan="5">{$foo['name']}</td>
 								</tr>
 								{foreach from=$backup key=k2 item=foo2}
 
 									{if $foo2['id_site'] eq $foo['id']}
-										<tr>
+										<tr class="tr-black">
 											<th class="" scope="row">{$foo2['id']}</th>
 											<td class="">{$foo2['date']}</td>
 											<td class="">{$foo2['name_file']}</td>
