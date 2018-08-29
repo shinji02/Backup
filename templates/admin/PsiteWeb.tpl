@@ -15,7 +15,7 @@
 		<script src="../templates/libs/jquery/jquery-3.2.1.min.js"></script>
 		<!-- Custom styles for this template -->
 		<link href="../templates/admin/css/sb-admin.css" rel="stylesheet">
-		<link href="../templates/admin/css/circle.css" rel="stylesheet">
+		<link href="../templates/admin/css/switch.css" rel="stylesheet">
 		<script src="../../libs/sweetAlert/sweetalert.min.js"></script>
 		<link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
 	</head>
@@ -70,6 +70,7 @@
 								<th scope="col">Nom</th>
 								<th scope="col">Addresse</th>
 								<th scope="col">Option</th>
+								<th scope="col">Auto Backup</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -84,6 +85,13 @@
 											<a href="index.php?page=PsiteWeb&modif=1&idSite={$foo.id}" title="Modifier le site"  class="btn btn-light"><i class="far fa-cogs"></i></a>
 											<button id="delete{$foo.id}" class="btn btn-danger btn-delete" role="button" title="Supprimer le site" value="{$foo.id}" ><i class="fas fa-trash-alt"></i></button>
 										</td>
+                                        <td>
+                                            <div class="col-4 text-center">
+                                                <label class="label-switch switch-success">
+                                                    <input type="checkbox" class="switch-square switch-bootstrap status jsSelect" name="site" id="site-{$foo.id}" value="0" checked="checked">
+                                                    <span class="lable"></span></label>
+                                            </div>
+                                        </td>
 									</tr>
 								{/foreach}
 							</div>
@@ -197,7 +205,7 @@
 
 		<script src="../templates/admin/js/popper.min.js"></script>
 		<script src="../templates/admin/js/bootstrap.min.js"></script>
-
+        <script src="../templates/admin/js/gestion.js"></script>
 	  </body>
 	</html>
 	</html>

@@ -218,3 +218,39 @@ $("#purgeEchec").click(function (event)
 			}
 		});
 });
+$(".jsSelect").change(function(event)
+{
+	valOrigin = $(this).val();
+    id = $(this).attr("id");
+    id = id.replace('site-','');
+	if(valOrigin == 1)
+	{
+		$(this).val("0");
+        valOrigin = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "crlGestion.php",
+            data: "changeAutoBackup=1&idSite="+id+"&newVal="+valOrigin,
+            success: function(data)
+            {
+                eval(data);
+            }
+        });
+
+	}
+    else if(valOrigin == 0)
+	{
+        $(this).val("1");
+        valOrigin = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "crlGestion.php",
+            data: "changeAutoBackup=1&idSite="+id+"&newVal="+valOrigin,
+            success: function(data)
+            {
+                eval(data);
+            }
+        });
+
+	}
+});
