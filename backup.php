@@ -20,7 +20,6 @@
 	$keySecurity = $myKey->getKey();
 	$MyEmail = new CMail();
 
-	$myFtp->checkDate($site);
 	$allSite = $bdd->query("SELECT * FROM list_site");
 	$statusBackup = $bdd->query("SELECT * FROM list_site WHERE backup_active = 0");
 	$disk = $myFtp->checkSpaceDisk();
@@ -34,6 +33,7 @@
 	}
 	foreach ($allSite as $site)
 	{
+		$myFtp->checkDate($site);
 		if($site['backup_active'] == 0)
 		{
 			$hooks2 = array(
@@ -66,7 +66,7 @@
 					'checkName' => $active1
 				);
 
-			curl_setopt($chName , CURLOPT_URL,$site[0]['addr']."backup/back.php");
+			curl_setopt($chName , CURLOPT_URL,$site['addr']."backup/back.php");
 			curl_setopt($chName , CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($chName , CURLOPT_CONNECTTIMEOUT, 5);
 			curl_setopt($chName , CURLOPT_TIMEOUT, 5);
