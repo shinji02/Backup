@@ -7,7 +7,6 @@
 	require_once '../conf/backup.php';
 
 	use factory\factory;
-	use PDO;
 	use key\CKey;
 	use mail\CMail;
 	use conf\backup;
@@ -50,7 +49,7 @@
 	$ch2 = curl_init();
  	$postData2 = array(
         	'sFormValidator' => $keySecurity,
-        	'checkSiteName' => $active
+        	'checkSiteName' => $active2
     	);
 	curl_setopt($ch2, CURLOPT_URL,$site[0]['addr']."backup/back.php");
 	curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
@@ -65,8 +64,9 @@
 
 	$data2 = curl_exec($ch2);
 	$httpcode = curl_getinfo($ch2, CURLINFO_HTTP_CODE);
+	$myFtp->updateBdd($data2, $site[0]['name'], "../save/");
 	curl_close($ch2);
-	$myFtp->updateBdd($data2,$site[0]['name'], $dir);
+	
 		
 if($myBackup)
 {
@@ -84,7 +84,7 @@ if($myBackup)
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_DNS_USE_GLOBAL_CACHE, false);
+		//curl_setopt($ch, CURLOPT_DNS_USE_GLOBAL_CACHE, false);
 		curl_setopt($ch, CURLOPT_DNS_CACHE_TIMEOUT, 1);
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_TIMEOUT,0);

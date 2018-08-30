@@ -105,7 +105,7 @@ class Cftp {
 			array($siteName,PDO::PARAM_STR),
 			array($oldName,PDO::PARAM_STR),
 		);
-		$ftp = $bdd->query("UPDATE list_site SET name=? WHERE name=?",$hooks2);
+		$ftp = $bdd->query("UPDATE list_site SET name=? WHERE name=?",$hooks);
 		rename($dir.$oldName, $dir.$siteName);
 	}
 	

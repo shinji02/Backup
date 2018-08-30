@@ -5,7 +5,6 @@ require_once '../phpClass/Cfactory.php';
 require_once '../conf/dataBase.php';
 use ftp\Cftp;
 use factory\factory;
-use PDO;
 use conf\dataBase;
 
 if(isset($_POST['nameSite']) && isset($_POST['addrSite']) && isset($_POST['selectServeur']))

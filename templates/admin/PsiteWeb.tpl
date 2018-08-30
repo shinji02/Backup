@@ -18,6 +18,7 @@
 		<link href="../templates/admin/css/switch.css" rel="stylesheet">
 		<script src="../../libs/sweetAlert/sweetalert.min.js"></script>
 		<link href="../../libs/sweetAlert/sweetalert.css" rel="stylesheet">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
 
 	<body id="page-top">
@@ -88,7 +89,7 @@
                                         <td>
                                             <div class="col-4 text-center">
                                                 <label class="label-switch switch-success">
-                                                    <input type="checkbox" class="switch-square switch-bootstrap status jsSelect" name="site" id="site-{$foo.id}" value="0" checked="checked">
+                                                    <input type="checkbox" class="switch-square switch-bootstrap status jsSelect" name="site" id="site-{$foo.id}" value="{$foo.allow_backup_auto}" {if $foo.allow_backup_auto == 1}checked="checked" {/if}>
                                                     <span class="lable"></span></label>
                                             </div>
                                         </td>
@@ -102,21 +103,21 @@
 				<hr>
 				<form name="{if isset($infoSite)}sendFormModifSite{else}sendFormNewSite{/if}" id="{if isset($infoSite)}sendFormModifSite{else}sendFormNewSite{/if}" action="" method="POST">
 					{if isset($infoSite)}
-						<input type="hidden" class="form-control" name="id" id="id" value="{$infoSite['id']}">
+						<input type="hidden" class="form-control" name="id" id="id" value="{$infoSite[0]['id']}">
 					{/if}
 					<div class="form-group">
 					  <label for="nameSite">Non du site</label>
-					  <input type="text" class="form-control" name="nameSite" id="nameSite" placeholder="Non du site" value="{if isset($infoSite)}{$infoSite['name']}{/if}">
+					  <input type="text" class="form-control" name="nameSite" id="nameSite" placeholder="Non du site" value="{if isset($infoSite)}{$infoSite[0]['name']}{/if}">
 					</div>
 					<div class="form-group">
 					  <label for="addrSite">Addresse du site</label>
-					  <input type="text" class="form-control" name="addrSite" id="addrSite" placeholder="Addresse du site" value="{if isset($infoSite)}{$infoSite['addr']}{/if}">
+					  <input type="text" class="form-control" name="addrSite" id="addrSite" placeholder="Addresse du site" value="{if isset($infoSite)}{$infoSite[0]['addr']}{/if}">
 					</div>
 					<div class="form-group">
 					<label for="selectServeur">Choix du serveur</label>
 					<select class="form-control select_custom" name="selectServeur" id="selectServeur">
 						{foreach from=$srv item=foo}
-							<option value="{$foo.id}" {if isset($infoSite)}{if $foo.id == $infoSite['id']}{/if}selected{/if}>{if isset($infoSite)}{if $foo.id == $infoSite['id']}{$ftpInfo['name__srv']}{else}{$foo.name__srv}{/if}{else}{$foo.name__srv}{/if}</option>
+							<option value="{$foo.id}" {if isset($infoSite)}{if $foo.id == $infoSite[0]['id']}{/if}selected{/if}>{if isset($infoSite)}{if $foo.id == $infoSite[0]['id']}{$ftpInfo['name__srv']}{else}{$foo.name__srv}{/if}{else}{$foo.name__srv}{/if}</option>
 						{/foreach}
 
 					</select>
@@ -185,9 +186,9 @@
 				var id = $(this).attr('id');
 				e.preventDefault();
 				swal({
-					title: "Confirmez?",
+					title: "Confirmez la suprresion?",
 					text: "Vous voulez surppimer le site?!",
-					icon: "info",
+					icon: "warning",
 					buttons: true,
 					dangerMode: true,
 				 })

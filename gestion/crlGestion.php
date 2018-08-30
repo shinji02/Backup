@@ -38,11 +38,11 @@ else if(isset($_POST['changeAutoBackup']) && isset($_POST['idSite']) && isset($_
       array($_POST['newVal'],PDO::PARAM_INT),
       array($_POST['idSite'],PDO::PARAM_INT),
     );
-    $bdd->query("UPDATE list_site SET allow_auto_backuo=? WHERE id=?",$hooks);
+    $bdd->query("UPDATE list_site SET allow_backup_auto=? WHERE id=?",$hooks);
     if($_POST['newVal']==1)
-        echo 'swal("Modification!", "Le backup automatique du site vient d\'être desactiver!", "success")';
-    else
         echo 'swal("Modification!", "Le backup automatique du site vient d\'être activer!", "success")';
+    else
+        echo 'swal("Modification!", "Le backup automatique du site vient d\'être desactiver!", "success")';
 }
 else
 {
